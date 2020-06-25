@@ -1,0 +1,10 @@
+#main-container {
+  background-color: black;
+  height: 100vh;
+}
+
+.navbar-title {
+  color: white;
+  margin-bottom: 0;
+  font-size: 1.5em;
+}
