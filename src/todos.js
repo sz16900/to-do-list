@@ -2,11 +2,7 @@ const Todo = (nam) => {
   const name = nam;
   const tasks = [];
 
-  const setTask = (task) => {
-    tasks.push(task);
-  };
-
-  return { name, tasks, setTask };
+  return { name, tasks };
 };
 
 export default Todo;

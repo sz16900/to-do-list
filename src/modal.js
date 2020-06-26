@@ -1,13 +1,4 @@
-import Task from './task';
-
-const grabInfo = () => {
-  const title = document.getElementById('title').value;
-  const description = document.getElementById('description').value;
-  const priority = document.getElementById('priority').value;
-  const dueDate = document.getElementById('dueDate').value;
-  const task = Task(title, description, priority, dueDate);
-  console.log(task);
-};
+import grabInfo from './infoHandler';
 
 const renderModal = () => {
   const container = document.getElementById('main-container');
