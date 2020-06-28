@@ -5,6 +5,7 @@ const setInfo = (task) => {
   //   add it to the all tasks project therefore [0]
   projects[0].tasks.push(task);
   localStorage.setItem('projects', JSON.stringify(projects));
+  window.location.reload();
 };
 
 const grabInfo = () => {

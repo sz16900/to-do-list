@@ -30,6 +30,10 @@ const renderModal = () => {
     const formGroup = document.createElement('div');
     const label = document.createElement('label');
     let input = document.createElement('input');
+    const opt1 = document.createElement('option');
+    const opt2 = document.createElement('option');
+    const opt3 = document.createElement('option');
+
     switch (index) {
       case 0:
         label.textContent = 'Title';
@@ -48,6 +52,13 @@ const renderModal = () => {
         input = document.createElement('select');
         input.setAttribute('class', 'form-control');
         input.setAttribute('id', 'priority');
+        opt1.textContent = 'minimum';
+        opt2.textContent = 'intermediate';
+        opt3.textContent = 'maximum';
+        input.appendChild(opt1);
+        input.appendChild(opt2);
+        input.appendChild(opt3);
+
         break;
       case 3:
         label.textContent = 'Due Date';
