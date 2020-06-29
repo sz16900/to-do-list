@@ -12,3 +12,16 @@
 .card-background {
   background-color: transparent;
 }
+
+.menu-panel {
+  width: 305px;
+  position: fixed;
+  top: 45px;
+  background: red;
+  padding: 0.5rem 2rem 1.5rem;
+  -webkit-box-shadow: 9px 4px 24px -25px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 9px 4px 24px -25px rgba(0, 0, 0, 0.3);
+  box-shadow: 9px 4px 24px -25px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+  z-index: 4;
+}
