@@ -37,9 +37,8 @@ const renderNavbar = () => {
   button.setAttribute('data-toggle', 'dropdown');
   button.setAttribute('aria-haspopup', 'true');
   button.setAttribute('aria-expanded', 'false');
-  button.classList.add('navbar-toggler');
-  const span = document.createElement('span');
-  span.classList.add('navbar-toggler-icon');
+  button.classList.add('btn', 'btn-secondary', 'dropdown-toggle');
+  button.textContent = 'List of Projects';
   const dpMenu = document.createElement('div');
   dpMenu.classList.add('dropdown-menu');
   dpMenu.setAttribute('aria-labelledby', 'dropdownMenuButton');
@@ -57,7 +56,6 @@ const renderNavbar = () => {
   h1.textContent = 'To-Do';
 
   // Add it to the chain
-  button.appendChild(span);
   dropdown.appendChild(button);
   dropdown.appendChild(dpMenu);
   nav.appendChild(form);

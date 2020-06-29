@@ -2,6 +2,7 @@ import grabInfo from './infoHandler';
 
 const renderModal = () => {
   const container = document.getElementById('main-container');
+  const projectsArray = JSON.parse(localStorage.projects);
 
   //   container
   const modalContainer = document.createElement('div');
@@ -26,7 +27,7 @@ const renderModal = () => {
   button.textContent = 'Add';
   button.setAttribute('type', 'button');
   button.addEventListener('click', grabInfo);
-  for (let index = 0; index < 4; index += 1) {
+  for (let index = 0; index < 5; index += 1) {
     const formGroup = document.createElement('div');
     const label = document.createElement('label');
     let input = document.createElement('input');
@@ -66,6 +67,19 @@ const renderModal = () => {
         input.setAttribute('type', 'date');
         input.setAttribute('id', 'dueDate');
         break;
+
+      case 4:
+        label.textContent = 'Project';
+        input = document.createElement('select');
+        input.setAttribute('class', 'form-control');
+        input.setAttribute('id', 'project');
+        for (let i = 0; i < projectsArray.length; i += 1) {
+          const opt1 = document.createElement('option');
+          opt1.textContent = projectsArray[i].name;
+          input.appendChild(opt1);
+        }
+        break;
+
       default:
         return null;
     }
