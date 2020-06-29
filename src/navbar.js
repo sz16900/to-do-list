@@ -1,13 +1,33 @@
+import addProject from './addProjectHandler';
+
 const renderNavbar = () => {
   const arrayOfProjects = JSON.parse(localStorage.projects);
 
   const container = document.getElementById('main-container');
   const nav = document.createElement('nav');
   nav.classList.add('navbar', 'navbar-dark', 'bg-dark');
-  const h1 = document.createElement('h1');
-  h1.classList.add('navbar-title');
-  h1.textContent = 'To-Do';
 
+  // Inline form
+  const form = document.createElement('form');
+  form.classList.add('form-inline');
+  const formGroup = document.createElement('div');
+  formGroup.classList.add('form-group', 'mx-sm-3', 'mb-2');
+  const input = document.createElement('input');
+  input.setAttribute('type', 'text');
+  input.setAttribute('class', 'form-control');
+  input.setAttribute('id', 'addProject');
+  input.setAttribute('placeholder', 'Add New Project');
+  const newProjectBtn = document.createElement('button');
+  newProjectBtn.setAttribute('type', 'submit');
+  newProjectBtn.classList.add('btn', 'btn-primary', 'mb-2');
+  newProjectBtn.textContent = '+';
+  newProjectBtn.addEventListener('click', addProject);
+
+  formGroup.appendChild(input);
+  form.appendChild(formGroup);
+  form.appendChild(newProjectBtn);
+
+  // DropDown Stuff
   const dropdown = document.createElement('div');
   dropdown.classList.add('dropdown');
   const button = document.createElement('button');
@@ -31,11 +51,17 @@ const renderNavbar = () => {
     dpMenu.appendChild(a);
   }
 
+  // Title or logo
+  const h1 = document.createElement('h1');
+  h1.classList.add('navbar-title');
+  h1.textContent = 'To-Do';
+
+  // Add it to the chain
   button.appendChild(span);
   dropdown.appendChild(button);
   dropdown.appendChild(dpMenu);
+  nav.appendChild(form);
   nav.appendChild(dropdown);
-
   nav.appendChild(h1);
   container.appendChild(nav);
 
