@@ -1,3 +1,5 @@
+import { removeBtn, changeBtn } from './cardButtons'
+
 const renderTasks = () => {
   const allTasksArray = JSON.parse(localStorage.projects)[0].tasks;
   const container = document.getElementById('main-container');
@@ -54,12 +56,23 @@ const renderTasks = () => {
     const cardText = document.createElement('p');
     cardText.classList.add('card-text');
     cardText.textContent = allTasksArray[index].description;
+    const editBtn = document.createElement('button');
+    editBtn.classList.add('btn', 'btn-secondary', 'm-2');
+    editBtn.textContent = 'Edit';
+    editBtn.addEventListener('click', changeBtn);
+    const deleteBtn = document.createElement('button');
+    deleteBtn.classList.add('btn', 'btn-danger', 'm-2');
+    deleteBtn.textContent = 'Delete';
+    deleteBtn.addEventListener('click', removeBtn);
     cardBody.appendChild(cardDate);
     cardBody.appendChild(cardText);
     card.appendChild(cardHeader);
     card.appendChild(cardBody);
     card.appendChild(cardBody);
+    card.appendChild(editBtn);
+    card.appendChild(deleteBtn);
     cardColumns.appendChild(card);
+
   }
   container.appendChild(cardColumns);
 };
