@@ -6,7 +6,6 @@ const renderButton = () => {
   button.setAttribute('data-toggle', 'modal');
   button.setAttribute('data-target', '#exampleModalCenter');
   button.textContent = 'New Task';
-  //   button.addEventListener('click', createTask);
   container.appendChild(button);
 };
 
