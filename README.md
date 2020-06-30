@@ -24,10 +24,6 @@
 - W3 Validators
 - Bootstrap
 
-## Live Demo
-
-[Live Demo Link]()
-
 ---
 
 ### Prerequisites
