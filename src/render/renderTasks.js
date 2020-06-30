@@ -16,7 +16,7 @@ const renderTasks = (i) => {
           'text-white',
           'border-success',
           'card-background',
-          'mb-3'
+          'mb-3',
         );
         break;
       case 'intermediate':
@@ -25,7 +25,7 @@ const renderTasks = (i) => {
           'text-white',
           'border-warning',
           'card-background',
-          'mb-3'
+          'mb-3',
         );
         break;
       case 'maximum':
@@ -34,7 +34,7 @@ const renderTasks = (i) => {
           'text-white',
           'border-danger',
           'card-background',
-          'mb-3'
+          'mb-3',
         );
         break;
       default:
@@ -43,7 +43,7 @@ const renderTasks = (i) => {
           'text-white',
           'border-success',
           'card-background',
-          'mb-3'
+          'mb-3',
         );
     }
     const cardHeader = document.createElement('div');
