@@ -1,4 +1,5 @@
 body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .navbar {
@@ -42,4 +43,20 @@ body {
   box-shadow: 9px 4px 24px -25px rgba(0, 0, 0, 0.3);
   overflow-y: auto;
   z-index: 4;
+}
+
+.modal-content form {
+  padding: 20px;
+}
+
+.modal-content form label {
+  margin-top: 10px;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.modal-content form .btn {
+  margin-top: 15px;
+  float: right;
+  width: 200px;
 }
