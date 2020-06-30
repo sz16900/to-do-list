@@ -1,4 +1,6 @@
 import addProject from './addProjectHandler';
+import renderTasks from './renderTasks';
+import renderTitle from './renderTitle';
 
 const renderNavbar = () => {
   const arrayOfProjects = JSON.parse(localStorage.projects);
@@ -44,9 +46,15 @@ const renderNavbar = () => {
   dpMenu.setAttribute('aria-labelledby', 'dropdownMenuButton');
 
   for (let index = 0; index < arrayOfProjects.length; index += 1) {
-    const a = document.createElement('a');
+    const a = document.createElement('button');
     a.textContent = arrayOfProjects[index].name;
     a.classList.add('dropdown-item');
+    a.addEventListener('click', () => {
+      document.getElementById('project-title').remove();
+      document.getElementById('card-column-id').remove();
+      renderTitle(arrayOfProjects[index].name);
+      renderTasks(index);
+    });
     dpMenu.appendChild(a);
   }
 

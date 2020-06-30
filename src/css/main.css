@@ -1,6 +1,5 @@
-#main-container {
+body {
   background-color: black;
-  height: 100vh;
 }
 
 .navbar-title {

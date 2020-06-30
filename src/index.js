@@ -8,9 +8,11 @@ import renderButton from './newTaskButton';
 import renderModal from './modal';
 import initializeLocalStorage from './initLocalStorage';
 import renderTasks from './renderTasks';
+import renderTitle from './renderTitle';
 
 initializeLocalStorage();
 renderModal();
 renderNavbar();
 renderButton();
-renderTasks();
+renderTitle('All Tasks');
+renderTasks(0);

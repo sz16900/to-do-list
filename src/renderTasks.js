@@ -1,10 +1,11 @@
 import removeBtn from './cardButtons';
 
-const renderTasks = () => {
-  const allTasksArray = JSON.parse(localStorage.projects)[0].tasks;
+const renderTasks = (i) => {
+  const allTasksArray = JSON.parse(localStorage.projects)[i].tasks;
   const container = document.getElementById('main-container');
   const cardColumns = document.createElement('div');
   cardColumns.classList.add('card-columns');
+  cardColumns.setAttribute('id', 'card-column-id');
 
   for (let index = 0; index < allTasksArray.length; index += 1) {
     const card = document.createElement('div');
@@ -15,7 +16,7 @@ const renderTasks = () => {
           'text-white',
           'border-success',
           'card-background',
-          'mb-3',
+          'mb-3'
         );
         break;
       case 'intermediate':
@@ -24,7 +25,7 @@ const renderTasks = () => {
           'text-white',
           'border-warning',
           'card-background',
-          'mb-3',
+          'mb-3'
         );
         break;
       case 'maximum':
@@ -33,7 +34,7 @@ const renderTasks = () => {
           'text-white',
           'border-danger',
           'card-background',
-          'mb-3',
+          'mb-3'
         );
         break;
       default:
@@ -42,7 +43,7 @@ const renderTasks = () => {
           'text-white',
           'border-success',
           'card-background',
-          'mb-3',
+          'mb-3'
         );
     }
     const cardHeader = document.createElement('div');
