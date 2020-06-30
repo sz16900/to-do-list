@@ -1,11 +1,30 @@
 body {
-  background-color: black;
+}
+
+.navbar {
+  padding-left: 0;
+}
+
+.new-task-btn {
+  margin-bottom: 2em;
+  margin-left: 3em;
+}
+
+.card-columns {
+  margin: 0 3em;
 }
 
 .navbar-title {
   color: white;
   margin-bottom: 0;
   font-size: 1.5em;
+}
+
+.card-title,
+.cart-text,
+.card-header,
+.card-body {
+  color: black;
 }
 
 .card-background {

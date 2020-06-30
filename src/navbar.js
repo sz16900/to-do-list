@@ -1,6 +1,7 @@
 import addProject from './addProjectHandler';
 import renderTasks from './renderTasks';
 import renderTitle from './renderTitle';
+import renderButton from './newTaskButton';
 
 const renderNavbar = () => {
   const arrayOfProjects = JSON.parse(localStorage.projects);
@@ -52,7 +53,9 @@ const renderNavbar = () => {
     a.addEventListener('click', () => {
       document.getElementById('project-title').remove();
       document.getElementById('card-column-id').remove();
+      document.getElementById('new-task').remove();
       renderTitle(arrayOfProjects[index].name);
+      renderButton();
       renderTasks(index);
     });
     dpMenu.appendChild(a);

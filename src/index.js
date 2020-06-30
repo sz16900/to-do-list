@@ -13,6 +13,6 @@ import renderTitle from './renderTitle';
 initializeLocalStorage();
 renderModal();
 renderNavbar();
-renderButton();
 renderTitle('All Tasks');
+renderButton();
 renderTasks(0);
