@@ -6,7 +6,11 @@
 
 ### Homepage
 
-![Homepage]()
+![Homepage](https://github.com/sz16900/to-do-list/blob/styles/src/assets/shot.png?raw=true)
+
+### Form
+
+![Form](https://github.com/sz16900/to-do-list/blob/styles/src/assets/shot2.png?raw=true)
 
 ---
 
