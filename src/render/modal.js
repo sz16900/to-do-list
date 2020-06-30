@@ -1,4 +1,4 @@
-import grabInfo from './infoHandler';
+import grabInfo from '../handlers/infoHandler';
 
 const renderModal = () => {
   const container = document.getElementById('main-container');

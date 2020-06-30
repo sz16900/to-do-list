@@ -1,4 +1,4 @@
-import Task from './task';
+import Task from '../objects/task';
 
 const setInfo = (task) => {
   const projects = JSON.parse(localStorage.getItem('projects'));

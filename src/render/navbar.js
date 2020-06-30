@@ -1,4 +1,4 @@
-import addProject from './addProjectHandler';
+import addProject from '../handlers/addProjectHandler';
 import renderTasks from './renderTasks';
 import renderTitle from './renderTitle';
 import renderButton from './newTaskButton';

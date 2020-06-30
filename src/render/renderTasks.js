@@ -1,4 +1,4 @@
-import removeBtn from './cardButtons';
+import removeBtn from '../handlers/cardButtons';
 
 const renderTasks = (i) => {
   const allTasksArray = JSON.parse(localStorage.projects)[i].tasks;

@@ -1,4 +1,4 @@
-import Todo from './todos';
+import Todo from '../objects/todos';
 
 const addProject = () => {
   const arrayOfProjects = JSON.parse(localStorage.projects);
