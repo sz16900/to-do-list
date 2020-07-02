@@ -72,7 +72,8 @@ const renderTasks = (i) => {
     deleteBtn.classList.add('btn', 'btn-danger', 'm-2');
     deleteBtn.textContent = 'Delete';
     deleteBtn.addEventListener('click', () => {
-      removeBtn(index);
+      const thisId = allTasksArray[index].id;
+      removeBtn(thisId);
     });
     cardBody.appendChild(cardDate);
     cardBody.appendChild(cardText);
