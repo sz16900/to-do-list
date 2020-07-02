@@ -57,6 +57,9 @@ const renderTasks = (i) => {
     const cardText = document.createElement('p');
     cardText.classList.add('card-text');
     cardText.textContent = allTasksArray[index].description;
+    const editBtn = document.createElement('button');
+    editBtn.classList.add('btn', 'btn-warning', 'm-2', 'text-white');
+    editBtn.textContent = 'Edit';
     const deleteBtn = document.createElement('button');
     deleteBtn.classList.add('btn', 'btn-danger', 'm-2');
     deleteBtn.textContent = 'Delete';
@@ -68,6 +71,7 @@ const renderTasks = (i) => {
     card.appendChild(cardHeader);
     card.appendChild(cardBody);
     card.appendChild(cardBody);
+    card.appendChild(editBtn);
     card.appendChild(deleteBtn);
     cardColumns.appendChild(card);
   }
