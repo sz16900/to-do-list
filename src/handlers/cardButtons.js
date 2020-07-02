@@ -1,27 +1,21 @@
 import { updateInfo, grabInfo } from './infoHandler';
 
 export const removeBtn = (thisId) => {
-  // const projects = JSON.parse(localStorage.getItem('projects'));
-  // //   this can be dynamically found by the name of the projects itself
-  // projects[0].tasks.splice(index, 1);
-  // localStorage.setItem('projects', JSON.stringify(projects));
-  // window.location.reload();
-
   const task = JSON.parse(localStorage.getItem('projects'))[0].tasks.find(
-    (o) => o.id === thisId
+    (o) => o.id === thisId,
   );
 
   const localStorageCopy = JSON.parse(localStorage.getItem('projects'));
 
   const indexOfTaskInAllTasks = localStorageCopy[0].tasks.findIndex(
-    (task) => task.id === thisId
+    (task) => task.id === thisId,
   );
   localStorageCopy[0].tasks.splice(indexOfTaskInAllTasks, 1);
 
   // set updated task into old array index
 
   const indexOfProjectInTodos = localStorageCopy.findIndex(
-    (o) => o.name === task.project
+    (o) => o.name === task.project,
   );
 
   const indexOfTaskInSpecificProject = localStorageCopy[
@@ -30,7 +24,7 @@ export const removeBtn = (thisId) => {
 
   localStorageCopy[indexOfProjectInTodos].tasks.splice(
     indexOfTaskInSpecificProject,
-    1
+    1,
   );
 
   localStorage.setItem('projects', JSON.stringify(localStorageCopy));
@@ -40,7 +34,7 @@ export const removeBtn = (thisId) => {
 
 export const updateBtn = (thisId) => {
   const task = JSON.parse(localStorage.getItem('projects'))[0].tasks.find(
-    (o) => o.id === thisId
+    (o) => o.id === thisId,
   );
 
   // change the values of the button

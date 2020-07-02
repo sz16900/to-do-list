@@ -17,27 +17,27 @@ export const updateInfo = (thisId, task) => {
   const priority = document.getElementById('priority').value;
   const dueDate = document.getElementById('dueDate').value;
   const project = document.getElementById('project').value;
-  const id = task.id;
+  const { id } = task;
   const newlyCreatedTask = Task(
     title,
     description,
     priority,
     dueDate,
     project,
-    id
+    id,
   );
 
   const localStorageCopy = JSON.parse(localStorage.getItem('projects'));
 
   const indexOfTaskInAllTasks = localStorageCopy[0].tasks.findIndex(
-    (task) => task.id === thisId
+    (task) => task.id === thisId,
   );
   localStorageCopy[0].tasks[indexOfTaskInAllTasks] = newlyCreatedTask;
 
   // set updated task into old array index
 
   const indexOfProjectInTodos = localStorageCopy.findIndex(
-    (o) => o.name === task.project
+    (o) => o.name === task.project,
   );
 
   const indexOfTaskInSpecificProject = localStorageCopy[
