@@ -1,4 +1,4 @@
-import grabInfo from '../handlers/infoHandler';
+import { grabInfo } from '../handlers/infoHandler';
 
 const renderModal = () => {
   const container = document.getElementById('main-container');
@@ -26,6 +26,7 @@ const renderModal = () => {
   button.classList.add('btn', 'btn-primary');
   button.textContent = 'Add';
   button.setAttribute('type', 'button');
+  button.setAttribute('id', 'add-update-btn');
   button.addEventListener('click', grabInfo);
   for (let index = 0; index < 5; index += 1) {
     const formGroup = document.createElement('div');

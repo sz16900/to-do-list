@@ -1,4 +1,4 @@
-import removeBtn from '../handlers/cardButtons';
+import { updateBtn, removeBtn } from '../handlers/cardButtons';
 
 const renderTasks = (i) => {
   const allTasksArray = JSON.parse(localStorage.projects)[i].tasks;
@@ -16,7 +16,7 @@ const renderTasks = (i) => {
           'text-white',
           'border-success',
           'card-background',
-          'mb-3',
+          'mb-3'
         );
         break;
       case 'intermediate':
@@ -25,7 +25,7 @@ const renderTasks = (i) => {
           'text-white',
           'border-warning',
           'card-background',
-          'mb-3',
+          'mb-3'
         );
         break;
       case 'maximum':
@@ -34,7 +34,7 @@ const renderTasks = (i) => {
           'text-white',
           'border-danger',
           'card-background',
-          'mb-3',
+          'mb-3'
         );
         break;
       default:
@@ -43,7 +43,7 @@ const renderTasks = (i) => {
           'text-white',
           'border-success',
           'card-background',
-          'mb-3',
+          'mb-3'
         );
     }
     const cardHeader = document.createElement('div');
@@ -58,7 +58,15 @@ const renderTasks = (i) => {
     cardText.classList.add('card-text');
     cardText.textContent = allTasksArray[index].description;
     const editBtn = document.createElement('button');
-    editBtn.classList.add('btn', 'btn-warning', 'm-2', 'text-white');
+    editBtn.addEventListener('click', () => {
+      const thisId = allTasksArray[index].id;
+      updateBtn(thisId);
+    });
+    editBtn.classList.add('btn', 'btn-warning', 'new-task-btn', 'm-2');
+    editBtn.setAttribute('type', 'button');
+    editBtn.setAttribute('id', 'new-task');
+    editBtn.setAttribute('data-toggle', 'modal');
+    editBtn.setAttribute('data-target', '#exampleModalCenter');
     editBtn.textContent = 'Edit';
     const deleteBtn = document.createElement('button');
     deleteBtn.classList.add('btn', 'btn-danger', 'm-2');
