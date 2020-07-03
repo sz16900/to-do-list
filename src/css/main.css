@@ -1,10 +1,68 @@
-#main-container {
-  background-color: black;
-  height: 100vh;
+body {
+  font-family:
+    'Trebuchet MS',
+    'Lucida Sans Unicode',
+    'Lucida Grande',
+    'Lucida Sans',
+    Arial,
+    sans-serif;
+}
+
+.navbar {
+  padding-left: 0;
+}
+
+.new-task-btn {
+  margin-bottom: 2em;
+  margin-left: 3em;
+}
+
+.card-columns {
+  margin: 0 3em;
 }
 
 .navbar-title {
   color: white;
   margin-bottom: 0;
   font-size: 1.5em;
+}
+
+.card-title,
+.cart-text,
+.card-header,
+.card-body {
+  color: black;
+}
+
+.card-background {
+  background-color: transparent;
+}
+
+.menu-panel {
+  width: 305px;
+  position: fixed;
+  top: 45px;
+  background: red;
+  padding: 0.5rem 2rem 1.5rem;
+  -webkit-box-shadow: 9px 4px 24px -25px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 9px 4px 24px -25px rgba(0, 0, 0, 0.3);
+  box-shadow: 9px 4px 24px -25px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+  z-index: 4;
+}
+
+.modal-content form {
+  padding: 20px;
+}
+
+.modal-content form label {
+  margin-top: 10px;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.modal-content form .btn {
+  margin-top: 15px;
+  float: right;
+  width: 200px;
 }

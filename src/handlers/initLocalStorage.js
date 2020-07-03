@@ -1,4 +1,4 @@
-import Todo from './todos';
+import Todo from '../objects/todos';
 
 const initializeLocalStorage = () => {
   if (localStorage.getItem('projects') === null) {
